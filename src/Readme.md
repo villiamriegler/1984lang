@@ -1,6 +1,6 @@
 # Language Specification
 
-Instruction encodings are of type `register` or `jump`. [Encoding specification](####Encoding-Specification) below specefies:
+Instruction encodings are of type `register` or `jump`. [Encoding specification](#Encoding-Specification) below specefies:
 
 > ### Register type
 > - 8: different operations

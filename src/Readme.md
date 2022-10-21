@@ -54,3 +54,37 @@ Operation documentation, defines the behavior off every operation.
 | 1          | WINSTON  | Handles i/o |
 | 2          | JULIA    | Good place to store information |
 | 3          | O'BRIAN  |  |
+
+## Example program
+```
+The Dayorder on day 2 was to always listen to big brother. 
+This made Equal feelings between JULIA and Winston even stronger and 0 people could stand in their way. 
+Dayorder on day 2 was however trubelsome for others.  
+
+
+For example this wasn't exactly Plusgood to O'Brian as he no longer cared for big brother all he whanted was to catch Winston with absolutly 0 regard for his own safety.
+Which was Plusungood for Julia whom missed SYME that had died 1 days ago.
+She needed to Crimestop her thinking JULIA and SYME were not i love and 1 day is too short to proccess.
+Also avoiding Joycamp for -4 days was really important 
+
+
+As approached Equal between Winston and O'Brian with soon 0 meters to go.
+The Dayorder on day 1 was announced to have been a test and many had failed.
+
+##################
+# NON FUZZY CODE #
+##################
+
+Dayorder 2 # Takes input into Winston
+Equal Julia Winston 0 # Moves input into Julia, julia is our counter
+
+Dayorder 2 # Takes input into Winston
+
+Plusgood O'Brian Winston 0 # O'Brian + Winston
+Plusungood JULIA SYME 1    # Julia - 1 
+Crimestop JULIA SYME 1     # If Julia == 0 jump one line 
+Joycamp -3                 # If Julia != 0 jump -3 lines
+
+Equal Winston O'Brian 0 # Moves O'Brian output into Winston
+Dayorder 1              # Prints Winston
+```

@@ -5,4 +5,4 @@
 #include <stdio.h>
 
 
-str_vector parseFile(FILE* file);
+str_vector *parseFile(FILE* file);

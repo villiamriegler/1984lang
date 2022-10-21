@@ -25,17 +25,17 @@ Operation documentation, defines the behavior off every operation.
 
 | **Operation** | **Description** |
 |---------------|-----------------|
-| ADD           | `rs = rs + rt + imm` |
-| SUB           | `rs = rs - rt - imm` |
-| SET           | `rs = rt + imm` |
-| JEQ           | Jump `imm`(0 or 1) lines if `rs == rt ` else jump `not imm` lines|
+| Plusgood           | `rs = rs + rt + imm` |
+| Plusungood           | `rs = rs - rt - imm` |
+| Equal           | `rs = rt + imm` |
+| Crimestop           | Jump `imm`(0 or 1) lines if `rs == rt ` else jump `not imm` lines|
 
 ### Jump operations
 
 | **Operation** | **Description** |
 |---------------|-----------------|
-| JUMP          | Jump unconditionally `adder`(0-32) lines |
-| CALL          | For call documentation see [Call Section](#CALL-operation) |
+| Joycamp          | Jump unconditionally `adder`(0-32) lines |
+| Dayorder      | A call instruction, documentation see [Call Section](#CALL-operation) |
 
 #### CALL operation
 | **Code** | **Function** |
@@ -43,3 +43,14 @@ Operation documentation, defines the behavior off every operation.
 | 1        | Prints value of R1 to standard output |
 | 2        | Gets value for standard input and stores it in R1 |
 | 3        | Terminates program |
+
+## Registers 
+
+1984lang supports 4 registers:
+
+| **Number** | **NAME** | **FUNCTION** |
+|------------|----------|--------------|
+| 0          | SYME     | Should alwyas be zero |
+| 1          | WINSTON  | Handles i/o |
+| 2          | JULIA    | Good place to store information |
+| 3          | O'BRIAN  |  |

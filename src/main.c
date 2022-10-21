@@ -6,14 +6,13 @@
 int main (int argc, char** argv){
     FILE* file; 
 
-    /*
+    
     if (argc != 2){ // Checking for correct number of arguments to compiler
         printf("Error: Too many or too few arguments supplied\n");
         exit(EXIT_FAILURE);
     }
-    */
     
-    file = fopen("test.txt","r");
+    file = fopen(argv[1],"r");
     if (file == NULL){
         perror("Error");
         exit(EXIT_FAILURE);

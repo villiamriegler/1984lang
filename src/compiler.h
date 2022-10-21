@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cstdint>
+#include <stdint.h>
 #include <stdint.h>
 
 
@@ -23,20 +23,23 @@ typedef union INSTRUNCTION{
 
 // operation codes 111 and 011 are unused 
 typedef uint8_t operationCode;
-const operationCode ADD     = 0x00;
-const operationCode SUB     = 0x01;
-const operationCode SET     = 0x02;
-const operationCode JUMP    = 0x4;
-const operationCode JEQ     = 0x5;
-const operationCode CALL    = 0x6;
+static const operationCode ADD     = 0x00;
+static const operationCode SUB     = 0x01;
+static const operationCode SET     = 0x02;
+static const operationCode JUMP    = 0x4;
+static const operationCode JEQ     = 0x5;
+static const operationCode CALL    = 0x6;
 
 #define is_j_type(x) (x & 0x4)      // Macro to check if operation is jump type
 #define is_r_type(x) (!(x & 0x4))   // Macro to check if operation is r type
 
 typedef uint8_t registerCode;
-const registerCode R0 = 0x0;
-const registerCode R1 = 0x1;
-const registerCode R2 = 0x2;
-const registerCode R3 = 0x3;
+static const registerCode R0 = 0x0;
+static const registerCode R1 = 0x1;
+static const registerCode R2 = 0x2;
+static const registerCode R3 = 0x3;
 
+// Encodes an instruction form a parsed line of code 
+// Assumes (line) to be a parsed correct instruction 
+INSTRUCTION encode_instr(char* line); // TODO: when you have decided keywords s
 

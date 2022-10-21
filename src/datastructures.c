@@ -22,7 +22,7 @@ void push_StrVec(str_vector *vec, char *line){
         vec -> size += vec -> size; // TODO: The size grows exponentially
         vec -> lines = realloc(vec -> lines, vec -> size * sizeof(char*));
         if (vec -> lines == NULL){
-            printf("ERROR: Could not reallocate memmory");
+            printf("ERROR: Could not reallocate memmory\n");
             exit(EXIT_FAILURE);
         }
     }
@@ -32,5 +32,35 @@ void push_StrVec(str_vector *vec, char *line){
 }
 
 void free_StrVec(str_vector *vec){
+    free(vec);
+}
+
+instr_vec* new_instrVec(size_t size){
+    instr_vec* vec = (instr_vec*)malloc(sizeof(instr_vec));
+    vec -> size = size;
+    vec -> used = 0;
+    vec -> instructions = (INSTRUCTION*)malloc(sizeof(INSTRUCTION) * size);
+    if (vec -> instructions == NULL){
+        printf("ERROR: Could not allocate memory\n");
+        exit(EXIT_FAILURE);
+    }
+
+    return vec;
+}
+
+void push_instrVec (instr_vec* instructions, INSTRUCTION instr){
+    if (instructions -> used == instructions -> size - 1){
+        instructions -> size += instructions -> size;
+        instructions -> instructions = realloc(instructions -> instructions, sizeof(INSTRUCTION) * instructions -> size);
+        if (instructions -> instructions == NULL){
+            printf("ERROR: Failed to reallocate memmory\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    instructions -> instructions[instructions -> used] = instr;
+    instructions -> used++;
+}
+
+void free_instrVec(instr_vec* vec){
     free(vec);
 }
